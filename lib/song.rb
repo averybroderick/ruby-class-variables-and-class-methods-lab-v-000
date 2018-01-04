@@ -18,12 +18,15 @@ class Song
   def self.count
     @@count
   end
-  
+
   def self.artists
-    artist_no_repeat = [] 
+    artist_no_repeat = []
     @@artists.each do |artist|
-      if !artist_no_repeat.include?(artist)? artist_no_repeat << artist : nil 
+      if !artist_no_repeat.include?(artist)?
+        artist_no_repeat << artist
+      end
     end
+    artist_no_repeat
   end
 
   def self.genres
