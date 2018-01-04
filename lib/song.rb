@@ -20,13 +20,7 @@ class Song
   end
 
   def self.artists
-    artist_no_repeat = []
-    @@artists.each do |artist|
-      if !artist_no_repeat.include?(artist)?
-        artist_no_repeat << artist
-      end
-    end
-    artist_no_repeat
+    @@artists.uniq
   end
 
   def self.genres
